@@ -1,0 +1,338 @@
+{
+    "rose": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Roses thrive in well-drained soil and require full sun.",
+        "alternative": "Consider planting marigolds, which are more tolerant of varying conditions."
+    },
+    "tomato": {
+        "ideal_conditions": {
+            "temperature": [18, 30],
+            "weather": ["clear sky", "few clouds", "scattered clouds"]
+        },
+        "suggestion": "Tomatoes need at least 6 hours of sunlight and consistent watering.",
+        "alternative": "If it's too cold, try planting kale instead."
+    },
+    "sunflower": {
+        "ideal_conditions": {
+            "temperature": [20, 35],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Sunflowers require full sun and well-drained soil.",
+        "alternative": "If conditions are too wet, consider planting zinnias."
+    },
+    "lavender": {
+        "ideal_conditions": {
+            "temperature": [10, 20],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Lavender prefers well-drained soil and full sun.",
+        "alternative": "If it's too humid, consider planting rosemary."
+    },
+    "basil": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Basil loves warm weather and should be watered regularly.",
+        "alternative": "If it's too cool, consider planting parsley instead."
+    },
+    "cucumber": {
+        "ideal_conditions": {
+            "temperature": [18, 30],
+            "weather": ["clear sky", "scattered clouds"]
+        },
+        "suggestion": "Cucumbers need plenty of sunlight and moisture.",
+        "alternative": "If it's too hot, try growing lettuce."
+    },
+    "carrot": {
+        "ideal_conditions": {
+            "temperature": [10, 20],
+            "weather": ["clear sky", "cloudy"]
+        },
+        "suggestion": "Carrots prefer loose, sandy soil and consistent watering.",
+        "alternative": "If conditions are too dry, consider planting beets."
+    },
+    "pepper": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Peppers thrive in warm weather with plenty of sunlight.",
+        "alternative": "If it's too cool, try planting green beans."
+    },
+    "spinach": {
+        "ideal_conditions": {
+            "temperature": [10, 20],
+            "weather": ["cool", "cloudy"]
+        },
+        "suggestion": "Spinach grows best in cooler temperatures and should be watered regularly.",
+        "alternative": "If it's too warm, consider planting Swiss chard."
+    },
+    "potato": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["cloudy", "scattered clouds"]
+        },
+        "suggestion": "Potatoes need well-drained soil and should be hilled as they grow.",
+        "alternative": "If conditions are too dry, consider planting sweet potatoes."
+    },
+    "onion": {
+        "ideal_conditions": {
+            "temperature": [10, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Onions prefer full sun and well-drained soil.",
+        "alternative": "If it's too wet, consider planting garlic."
+    },
+    "cabbage": {
+        "ideal_conditions": {
+            "temperature": [15, 20],
+            "weather": ["cool", "cloudy"]
+        },
+        "suggestion": "Cabbage grows best in cooler weather and needs consistent watering.",
+        "alternative": "If it's too warm, try planting kale."
+    },
+    "broccoli": {
+        "ideal_conditions": {
+            "temperature": [15, 20],
+            "weather": ["cool", "cloudy"]
+        },
+        "suggestion": "Broccoli prefers cool weather and should be watered regularly.",
+        "alternative": "If conditions are too warm, consider planting cauliflower."
+    },
+    "eggplant": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Eggplants need full sun and well-drained soil.",
+        "alternative": "If it's too cool, try planting squash."
+    },
+    "strawberry": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Strawberries thrive in well-drained soil and require full sun.",
+        "alternative": "If conditions are too wet, consider planting raspberries."
+    },
+    "melon": {
+        "ideal_conditions": {
+            "temperature": [20, 35],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Melons need plenty of sunlight and consistent moisture.",
+        "alternative": "If it's too cool, consider planting cucumbers."
+    },
+    "pumpkin": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Pumpkins require full sun and well-drained soil.",
+        "alternative": "If conditions are too wet, consider planting squash."
+    },
+    "kiwi": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Kiwi needs well-drained soil and a sunny location.",
+        "alternative": "If it's too cold, try planting grapes."
+    },
+    "fig": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Figs thrive in warm climates with full sun.",
+        "alternative": "If conditions are too cool, consider planting blackberries."
+    },
+    "grape": {
+        "ideal_conditions": {
+            "temperature": [15, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Grapes need full sun and well-drained soil.",
+        "alternative": "If it's too wet, try planting raspberries."
+    },
+    "peach": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Peaches require full sun and well-drained soil.",
+        "alternative": "If conditions are too cool, consider planting nectarines."
+    },
+    "pear": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Pears thrive in well-drained soil and require full sun.",
+        "alternative": "If it's too wet, consider planting apples."
+    },
+    "apple": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Apples prefer well-drained soil and full sun.",
+        "alternative": "If conditions are too warm, consider planting cherries."
+    },
+    "cherry": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Cherries thrive in well-drained soil and require full sun.",
+        "alternative": "If it's too wet, consider planting plums."
+    },
+    "plum": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Plums prefer well-drained soil and full sun.",
+        "alternative": "If conditions are too warm, consider planting apricots."
+    },
+    "apricot": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Apricots thrive in well-drained soil and require full sun.",
+        "alternative": "If it's too wet, consider planting peaches."
+    },
+    "citrus": {
+        "ideal_conditions": {
+            "temperature": [15, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Citrus trees need full sun and well-drained soil.",
+        "alternative": "If conditions are too cool, consider planting figs."
+    },
+    "coconut": {
+        "ideal_conditions": {
+            "temperature": [25, 35],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Coconut palms thrive in sandy, well-drained soil and require full sun.",
+        "alternative": "If it's too cool, try planting bananas."
+    },
+    "banana": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Bananas need rich soil and plenty of water.",
+        "alternative": "If conditions are too dry, consider planting plantains."
+    },
+    "pomegranate": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Pomegranates thrive in well-drained soil and full sun.",
+        "alternative": "If it's too wet, consider planting figs."
+    },
+    "cauliflower": {
+        "ideal_conditions": {
+            "temperature": [15, 20],
+            "weather": ["cool", "cloudy"]
+        },
+        "suggestion": "Cauliflower needs consistent moisture and cool temperatures.",
+        "alternative": "If it's too warm, try planting broccoli."
+    },
+    "lettuce": {
+        "ideal_conditions": {
+            "temperature": [10, 20],
+            "weather": ["cool", "cloudy"]
+        },
+        "suggestion": "Lettuce thrives in cooler weather and should be kept moist.",
+        "alternative": "If it's too warm, consider planting spinach."
+    },
+    "arugula": {
+        "ideal_conditions": {
+            "temperature": [10, 20],
+            "weather": ["cool", "cloudy"]
+        },
+        "suggestion": "Arugula prefers cooler weather and well-drained soil.",
+        "alternative": "If it's too warm, consider planting kale."
+    },
+    "kale": {
+        "ideal_conditions": {
+            "temperature": [10, 20],
+            "weather": ["cool", "cloudy"]
+        },
+        "suggestion": "Kale thrives in cooler temperatures and needs consistent watering.",
+        "alternative": "If it's too warm, try planting collard greens."
+    },
+    "swiss_chard": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Swiss chard prefers well-drained soil and full sun.",
+        "alternative": "If conditions are too warm, consider planting spinach."
+    },
+    "asparagus": {
+        "ideal_conditions": {
+            "temperature": [15, 25],
+            "weather": ["clear sky", "few clouds"]
+        },
+        "suggestion": "Asparagus thrives in well-drained soil and requires full sun.",
+        "alternative": "If it's too cool, consider planting peas."
+    },
+    "green_bean": {
+        "ideal_conditions": {
+            "temperature": [15, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Green beans need full sun and well-drained soil.",
+        "alternative": "If conditions are too cool, consider planting peas."
+    },
+    "snap_bean": {
+        "ideal_conditions": {
+            "temperature": [15, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Snap beans thrive in warm weather and should be watered regularly.",
+        "alternative": "If it's too cool, try planting green beans."
+    },
+    "squash": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Squash needs full sun and well-drained soil.",
+        "alternative": "If conditions are too cool, consider planting zucchini."
+    },
+    "zucchini": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Zucchini thrives in warm weather and should be watered regularly.",
+        "alternative": "If it's too cool, try planting cucumbers."
+    },
+    "bell_pepper": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Bell peppers need full sun and well-drained soil.",
+        "alternative": "If conditions are too cool, consider planting hot peppers."
+    },
+    "hotpepper": {
+        "ideal_conditions": {
+            "temperature": [20, 30],
+            "weather": ["clear sky", "sunny"]
+        },
+        "suggestion": "Hot peppers thrive in warm weather and require full sun.",
+        "alternative": "If it's too cool, try planting bell peppers."
+    }
+}

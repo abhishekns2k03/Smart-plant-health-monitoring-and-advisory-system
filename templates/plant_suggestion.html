@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Suggestions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Plant Suggestions</h2>
+        <div class="weather-card">
+            <div class="weather-icon">
+                <span id="weather-emoji">{{ weather.emoji }}</span>
+            </div>
+            <div class="weather-details">
+                <p><strong>Temperature:</strong> {{ weather.temperature }} °C</p>
+                <p><strong>Description:</strong> {{ weather.description }}</p>
+            </div>
+        </div>
+        <form method="POST">
+            <div class="form-group">
+                <label for="plant_type">Type of Plant:</label>
+                <input type="text" class="form-control" id="plant_type" name="plant_type" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Suggestions</button>
+        </form>
+        {% if suggestion %}
+            <h3>Suggestion:</h3>
+            <p>{{ suggestion }}</p>
+        {% endif %}
+        <br>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</body>
+</html>

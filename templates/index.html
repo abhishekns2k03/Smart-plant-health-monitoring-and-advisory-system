@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <div class="weather-icon">
+                <span id="weather-emoji">{{ weather.emoji }}</span>
+            </div>
+            <div class="weather-details">
+                <p><strong>Temperature:</strong> {{ weather.temperature }} °C</p>
+                <p><strong>Description:</strong> {{ weather.description }}</p>
+            </div>
+        </div>
+        <h1>Welcome, {{ username }}!</h1>
+        <div class="suggestions">
+            <h3>Plant Suggestions</h3>
+            <a href="{{ url_for('plant_suggestion') }}" class="btn btn-primary">Get Plant Suggestions</a>
+        </div>
+        <div class="disease-detection">
+            <h3>Plant Disease Detection</h3>
+            <a href="{{ url_for('disease_detection') }}" class="btn btn-primary">Detect Plant Disease</a>
+        </div>
+        <br><br>
+    </div>
+
+    <!-- User Icon -->
+    <div class="user-icon" id="user-icon">
+        <span>👤</span>
+    </div>
+
+    <!-- User Tooltip -->
+    <div class="user-tooltip" id="user-tooltip">
+        <p><strong>{{ username }}</strong></p> <!-- Bold username -->
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+
+    <div class="chatbot-icon">
+        <a href="{{ url_for('chatbot') }}" class="chatbot-icon">💬</a>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Toggle user tooltip visibility on icon click
+            $('#user-icon').on('click', function() {
+                $('#user-tooltip').toggle(); // Show or hide the tooltip
+            });
+
+            // Optional: Hide the tooltip when clicking outside
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('#user-icon').length) {
+                    $('#user-tooltip').hide(); // Hide tooltip if clicking outside
+                }
+            });
+        });
+    </script>
+</body>
+</html>

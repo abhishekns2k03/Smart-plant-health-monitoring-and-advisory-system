@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Plant Disease Detection</h2>
+        <div class="weather-card">
+            <div class="weather-icon">
+                <span id="weather-emoji">{{ weather.emoji }}</span>
+            </div>
+            <div class="weather-details">
+                <p><strong>Temperature:</strong> {{ weather.temperature }} °C</p>
+                <p><strong>Description:</strong> {{ weather.description }}</p>
+            </div>
+        </div>  
+        <form method="POST" action="{{ url_for('disease_detection') }}" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <button type="submit">Upload</button>
+        </form>
+        {% if disease %}
+            <h3>Detected Disease:</h3>
+            <p>{{ disease }}</p>
+        {% endif %}
+        <br><br>
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Dashboard</a>
+    </div>
+</body>
+</html>

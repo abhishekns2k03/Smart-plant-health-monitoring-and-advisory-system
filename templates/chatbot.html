@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        #chatbox {
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 450px;
+            width: 650px;
+            padding-right: 10px;
+            overflow-y: scroll;
+            margin-bottom: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        .user-message {
+            text-align: right;
+            margin: 5px 0;
+            background-color: #d1e7dd; /* Light green background for user messages */
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .bot-message {
+            text-align: left;
+            margin: 5px 0;
+            background-color: #cfe2ff; /* Light blue background for bot messages */
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .loader {
+            display: none;
+            border: 4px solid #f3f3f3; /* Light grey */
+            border-top: 4px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin: 5px 0;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        input[type="text"] {
+            width: calc(100% - 90px);
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            display: inline-block;
+            width: 80px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Chatbot</h2>
+        <div id="chatbox">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="input-group">
+            <input type="text" id="user_input" class="form-control" placeholder="Type your message here...">
+            <button id="send_button" class="btn btn-primary">Send</button>
+        </div>
+        <div class="loader" id="loader"></div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            function sendMessage() {
+                var userInput = $('#user_input').val();
+                if (userInput.trim() === '') {
+                    return; // Prevent sending empty messages
+                }
+
+                // Append user message to chatbox
+                $('#chatbox').append("<div class='user-message'>User: " + userInput + "</div>");
+                $('#user_input').val(''); // Clear input field
+
+                // Show loader
+                $('#loader').show();
+
+                // Send AJAX request to Flask backend
+                $.ajax({
+                    url: '/chatbot', // The endpoint for your Flask route
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ message: userInput }),
+                    success: function(response) {
+                        // Hide loader
+                        $('#loader').hide();
+                        // Append bot response to chatbox
+                        $('#chatbox').append("<div class='bot-message'>Bot: " + response.response + "</div>");
+                        $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight); // Scroll to the bottom
+                    },
+                    error: function() {
+                        // Hide loader
+                        $('#loader').hide();
+                        $('#chatbox').append("<div class='bot-message'>Bot: Sorry, there was an error processing your request.</div>");
+                    }
+                });
+            }
+
+            // Send message on button click
+            $('#send_button').on('click', sendMessage);
+
+            // Send message on Enter key press
+            $('#user_input').on('keypress', function(event) {
+                if (event.which === 13) { // Enter key
+                    event.preventDefault(); // Prevent form submission
+                    sendMessage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
