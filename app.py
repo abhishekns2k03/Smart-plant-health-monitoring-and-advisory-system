@@ -42,7 +42,8 @@ chat_session = model.start_chat(
 
 
 # Load user data from JSON file
-with open(r'C:\Users\HP\Desktop\Project\streamlit\users.json', 'r') as f:
+# paste the users.json path in the below function
+with open(r'users.json', 'r') as f:
     users = json.load(f)
 
 # Load plant data and ML model
@@ -206,7 +207,8 @@ def get_weather(city):
     }
 
 def load_plant_data():
-    with open(r'C:\Users\HP\Desktop\Project\streamlit\data\plant_data.json', 'r') as json_file:
+    # paste the plant_data.json path in the below function
+    with open(r'plant_data.json', 'r') as json_file:
         return json.load(json_file)
 
 def suggest_plant(plant_type, weather):
