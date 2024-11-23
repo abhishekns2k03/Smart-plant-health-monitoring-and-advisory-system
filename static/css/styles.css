@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: url('pexels-nc-farm-bureau-mark-2749165.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire body */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px; /* Adjust width for login form */
+    margin: auto;
+    padding: 40px; /* Increased padding for a more spacious feel */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: none; /* No box shadow for a cleaner look */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the logo in the header */
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Slightly larger logo */
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 28px; /* Larger font size for the logo */
+    color: #4caf50;
+    margin: 0;
+}
+
+/* Headings */
+h1, h2 {
+    color: #4caf50;
+    text-align: center; /* Center align headings */
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+label {
+    font-weight: bold;
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px; /* Increased padding for a more comfortable input */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for inputs */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    background-color: rgba(255, 255, 255, 1); /* Solid background on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Subtle shadow on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Button Styles */
+.btn {
+    margin-top: 20px; /* Increased margin for better spacing */
+    padding: 12px 15px; /* Increased padding for buttons */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 15px; /* Larger font size for buttons */
+    width: 100%; /* Full width button */
+}
+
+.btn-primary {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #388e3c;
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.btn-primary:active {
+    transform: scale(0.95); /* Slightly decrease the size when clicked */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+
+/* Alert Styles */
+.alert {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.alert-danger {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+}
+
+/* Animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+.user-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Green background */
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-tooltip {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px; /* Position below the user icon */
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Weather Section */
+.weather {
+    color:black;
+    position:absolute;
+    top: 10px;
+    left: 20px;
+    padding: 5px;
+}
+.weather-card {
+    position: absolute; /* Position it absolutely within the container */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.weather-icon {
+    font-size: 50px; /* Size of the weather emoji */
+    margin-right: 20px; /* Space between emoji and text */
+}
+
+.weather-details {
+    font-size: 18px; /* Font size for weather details */
+}
